@@ -8,7 +8,7 @@ import zipfile
 
 
 
-# открываем word и сохраняем наш doc файл как docx
+# открываем word и сохраняем наш doc файл как docx 
 def doc_to_docx(path):
     word = win32com.client.Dispatch('word.application')
     word.DisplayAlerts = 0
@@ -45,13 +45,19 @@ def extract_image(docx_path, dest_path):
             doc.extract(info.filename, dest_path)
     doc.close()
 
-
+def rename():
+    path = sys.argv[1]
+    path = path[:-4] + '_files'
+    os.rename("word", path)
 
 path = os.path.abspath(sys.argv[1])
 doc_to_docx(path)
+
 docx_path = path+'x'
 img_path = path.replace(sys.argv[1],"")
+
 extract_image(docx_path, img_path)
 extract_text(docx_path)
 
+rename()
 os.remove(docx_path)
