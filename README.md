@@ -14,4 +14,5 @@ pip install python-docx
 
 После выполнения появится папка "документ_files" со всеми файлами.
 
-![1](https://user-images.githubusercontent.com/56086653/108627401-71d1e780-7466-11eb-9e60-d8192c5a2509.PNG)
+![1](https://user-images.githubusercontent.com/56086653/108627918-f7569700-7468-11eb-8688-bdd6fac75c1c.PNG)
+
